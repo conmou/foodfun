@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">foodfun</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_title">搜尋房間名稱</string>
+    <string name="detail_setting_title">設定</string>
+    <string name="detail_visited_title">造訪過的地方</string>
+    <string name="friend_manage">x位朋友</string>
+    <string name="friend_invite">交友邀請</string>
+    <string name="party_group_imgbg">返回</string>
+</resources>

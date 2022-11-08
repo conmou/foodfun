@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragmentRecommend"
+        android:icon="@drawable/home"
+        android:iconTint="#F8EDED"
+        android:title="首頁" />
+    <item
+        android:id="@+id/fragmentList"
+        android:icon="@drawable/list"
+        android:iconTint="#F8EDED"
+        android:title="清單" />
+    <item
+        android:id="@+id/fragmentParty"
+        android:icon="@drawable/party"
+        android:iconTint="#F8EDED"
+        android:title="揪團" />
+    <item
+        android:id="@+id/fragmentFriend"
+        android:icon="@drawable/friend"
+        android:iconTint="#F8EDED"
+        android:title="朋友" />
+    <item
+        android:id="@+id/fragmentDetail"
+        android:icon="@drawable/detail"
+        android:iconTint="#F8EDED"
+        android:title="個人" />
+</menu>

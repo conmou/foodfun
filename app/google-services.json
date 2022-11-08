@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "113249720534",
+    "firebase_url": "https://foodfun-1c362-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "foodfun-1c362",
+    "storage_bucket": "foodfun-1c362.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113249720534:android:ce6cbdb6b289b279e61177",
+        "android_client_info": {
+          "package_name": "edu.foodfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113249720534-un59pmb0evqjsopvhvu2keqq45uqrlui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.foodfun",
+            "certificate_hash": "1003ed0167e531434cbc5785862bc482b55e4db9"
+          }
+        },
+        {
+          "client_id": "113249720534-uvrfge7jskc8jbqsqvk675kj7sjfrovp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiVkiWwtv86i07fdehkxU1tHV0Th2wMxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113249720534-uvrfge7jskc8jbqsqvk675kj7sjfrovp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

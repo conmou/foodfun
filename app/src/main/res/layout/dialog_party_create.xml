@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:minWidth="350dp"
+    android:background="@drawable/radius_8dp"
+    android:backgroundTint="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/labPartyCreateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="房間名稱"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/txtPartyCreateName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:gravity="center"
+                android:hint="輸入名稱"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateName" />
+
+            <TextView
+                android:id="@+id/labPartyCreateDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="房間簡介"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateName" />
+
+            <EditText
+                android:id="@+id/txtPartyCreateDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:gravity="center"
+                android:hint="輸入簡介"
+                android:inputType="textMultiLine"
+                android:maxLength="40"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateDescription" />
+
+            <TextView
+                android:id="@+id/labPartyCreateRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="目標餐廳"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateDescription" />
+
+            <!--            <SearchView-->
+            <!--                android:id="@+id/searchRestaurant"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_marginStart="24dp"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:layout_marginEnd="24dp"-->
+            <!--                android:background="@drawable/inputbox_dialog_party"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateRestaurant" />-->
+
+            <EditText
+                android:id="@+id/txtPartyCreateRestaurant"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:gravity="center"
+                android:hint="輸入餐廳名"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateRestaurant" />
+
+            <TextView
+                android:id="@+id/labPartyCreateStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="開始時間"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateRestaurant" />
+
+            <TextView
+                android:id="@+id/txtPartyCreateStartTime"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:gravity="center"
+                android:hint="選擇日期"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateStartTime" />
+
+            <TextView
+                android:id="@+id/labPartyCreateMaxMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="房間人數"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateStartTime" />
+
+            <Spinner
+                android:id="@+id/spinnerPartyCreateMaxMember"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateMaxMember" />
+
+            <ImageView
+                android:id="@+id/imageMaxMemberArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerPartyCreateMaxMember"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerPartyCreateMaxMember"
+                app:layout_constraintTop_toTopOf="@+id/spinnerPartyCreateMaxMember"
+                app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/labPartyCreateEncrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="房間上鎖"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/spinnerPartyCreateMaxMember"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateStartTime" />
+
+            <CheckBox
+                android:id="@+id/checkPartyCreateEncrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-4dp"
+                android:buttonTint="@color/navy_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/labPartyCreateEncrypt"
+                app:layout_constraintStart_toEndOf="@+id/labPartyCreateEncrypt"
+                app:layout_constraintTop_toTopOf="@+id/labPartyCreateEncrypt" />
+
+            <EditText
+                android:id="@+id/txtPartyCreatePassword"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/inputbox_dialog_party"
+                android:inputType="numberPassword"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerPartyCreateMaxMember"
+                app:layout_constraintTop_toBottomOf="@+id/labPartyCreateMaxMember" />
+
+            <Button
+                android:id="@+id/btnCancelCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#D65050"
+                android:text="取消"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPartyCreateMaxMember" />
+
+            <Button
+                android:id="@+id/btnConfirmCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#1E83B3"
+                android:text="創建房間"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPartyCreateMaxMember" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSearchResault"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/radius_8dp"
+                android:backgroundTint="#FFFFFF"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPartyCreateRestaurant" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

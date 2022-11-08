@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/radius_12dp"
+    android:backgroundTint="#E7E7E7">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgQuestionAvatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/check"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/labQuestionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgQuestionAvatar"
+        app:layout_constraintStart_toEndOf="@+id/imgQuestionAvatar"
+        app:layout_constraintTop_toTopOf="@+id/imgQuestionAvatar" />
+
+    <EditText
+        android:id="@+id/txtQuestionComment"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/radius_8dp"
+        android:backgroundTint="#FDFDFD"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="寫下你的評論吧"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgQuestionAvatar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestionComment">
+
+        <CheckBox
+            android:id="@+id/btnHumorous"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_humorous_selector"
+            android:button="@null" />
+
+        <CheckBox
+            android:id="@+id/btnChatty"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_chatty_selector"
+            android:button="@null" />
+
+        <CheckBox
+            android:id="@+id/btnConsiderate"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_considerate_selector"
+            android:button="@null" />
+
+        <CheckBox
+            android:id="@+id/btnIntroverted"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_introverted_selector"
+            android:button="@null" />
+
+        <CheckBox
+            android:id="@+id/btnLech"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_lech_selector"
+            android:button="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:text="搞笑" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:text="健談" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:text="細心" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:text="內向" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text=" 老司機" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentFriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_200"
+    android:padding="15dp"
+    tools:context=".fragment.FriendFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/white">
+
+            <EditText
+                android:id="@+id/editfriendSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="搜尋好友"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnFriendSearch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnFriendSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/baseline_search_black_24"
+                app:layout_constraintBottom_toBottomOf="@+id/editfriendSearch"
+                app:layout_constraintTop_toTopOf="@+id/editfriendSearch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/FconstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnview">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFriendManageList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFriendManage"
+            app:layout_constraintEnd_toStartOf="@+id/btnFriendManage"
+            app:layout_constraintTop_toTopOf="@+id/btnFriendManage">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnFriendInvite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:stateListAnimator="@null"
+                android:text="交友邀請"
+                app:backgroundTint="#FFFFFF"
+                app:fabSize="auto"
+                app:icon="@drawable/baseline_person_add_black_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:rippleColor="#ECECEC" />
+
+            <TextView
+                android:id="@+id/labInviteCount"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/achievement_oval"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnFriendManage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:text="好友管理"
+            app:backgroundTint="#FFFFFF"
+            app:fabSize="auto"
+            app:icon="@drawable/baseline_people_alt_black_20"
+            app:layout_constraintBottom_toBottomOf="@+id/btnQRCode"
+            app:layout_constraintEnd_toStartOf="@+id/btnQRCode"
+            app:layout_constraintTop_toTopOf="@+id/btnQRCode"
+            app:rippleColor="#ECECEC" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnQRCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            app:backgroundTint="#FFFFFF"
+            app:fabCustomSize="50dp"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            app:rippleColor="#ECECEC"
+            app:srcCompat="@drawable/baseline_qr_code_2_black_20" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

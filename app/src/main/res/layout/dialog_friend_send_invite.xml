@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageFriendInviteAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/txtSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/bottom_nav_selected_color"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFriendInviteAvatar"
+        app:layout_constraintStart_toEndOf="@+id/imageFriendInviteAvatar"
+        app:layout_constraintTop_toTopOf="@+id/imageFriendInviteAvatar" />
+
+    <TextView
+        android:id="@+id/txtInviteReservedWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="寄送交友邀請"
+        android:textColor="@color/bottom_nav_selected_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSenderName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSenderName"
+        app:layout_constraintTop_toTopOf="@+id/txtSenderName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

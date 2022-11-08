@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style name="RoundAndCutImageStyle">
+    <item name="cornerFamilyTopLeft">rounded</item>
+    <item name="cornerFamilyBottomLeft">rounded</item>
+    <item name="cornerFamilyTopRight">cut</item>
+    <item name="cornerFamilyBottomRight">cut</item>
+    <item name="cornerSize">50%</item>
+    <item name="cornerSizeBottomLeft">20dp</item>
+    <item name="cornerSizeTopLeft">20dp</item>
+</style>

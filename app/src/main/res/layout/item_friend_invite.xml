@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/radius_8dp"
+    android:backgroundTint="#F8EDED"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFriendInviteRefuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:contentDescription="拒絕"
+        app:backgroundTint="#FF5151"
+        app:fabCustomSize="45dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/baseline_clear_black_20" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFriendInviteAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:contentDescription="接受"
+        app:backgroundTint="#97F68F"
+        app:fabCustomSize="45dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFriendInviteRefuse"
+        app:layout_constraintEnd_toStartOf="@+id/btnFriendInviteRefuse"
+        app:layout_constraintTop_toTopOf="@+id/btnFriendInviteRefuse"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/baseline_done_black_20" />
+
+    <TextView
+        android:id="@+id/txtInviteFriendNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFriendInviteAccept"
+        app:layout_constraintStart_toEndOf="@+id/imageFriendInviteAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageFriendInviteAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

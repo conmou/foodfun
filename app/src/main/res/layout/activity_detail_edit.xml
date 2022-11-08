@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutEdit"
+        android:layout_width="0dp"
+        android:layout_height="480dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#F8EDED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageAvatar">
+
+        <TextView
+            android:id="@+id/labNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="暱稱"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtNickName"
+            app:layout_constraintStart_toStartOf="@+id/txtNickName" />
+
+        <EditText
+            android:id="@+id/txtNickName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="#FDFDFD"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="請輸入暱稱"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="生日"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtBirthday"
+            app:layout_constraintStart_toStartOf="@+id/txtBirthday" />
+
+        <TextView
+            android:id="@+id/txtBirthday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="#FDFDFD"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="請輸入生日"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNickName"
+            app:layout_constraintStart_toStartOf="@+id/txtNickName"
+            app:layout_constraintTop_toBottomOf="@+id/txtNickName" />
+
+        <TextView
+            android:id="@+id/labBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="個人簡介"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtBio"
+            app:layout_constraintStart_toStartOf="@+id/txtBio" />
+
+        <EditText
+            android:id="@+id/txtBio"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="#FDFDFD"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="請輸入個人簡介"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:overScrollMode="ifContentScrolls"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/txtBirthday"
+            app:layout_constraintStart_toStartOf="@+id/txtBirthday"
+            app:layout_constraintTop_toBottomOf="@+id/txtBirthday" />
+
+        <TextView
+            android:id="@+id/labSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性別"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/txtBio"
+            app:layout_constraintTop_toBottomOf="@+id/txtBio">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="男性" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:paddingEnd="5dp"
+                android:text="女性" />
+        </RadioGroup>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnDetailEditSubmit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:contentDescription="提交"
+            app:backgroundTint="#FFFFFF"
+            app:collapsedSize="48dp"
+            app:fabSize="normal"
+            app:icon="@drawable/baseline_done_black_20"
+            app:iconSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

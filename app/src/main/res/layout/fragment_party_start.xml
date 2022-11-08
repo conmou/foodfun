@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/PartyStartMapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/primary_100"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPartyStartMessageList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/radius_10dp"
+                android:backgroundTint="@color/white"
+                android:padding="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtPartyStartMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/txtPartyStartMessage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/radius_10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="輸入訊息"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnPartyStartSend"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnPartyStartSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="false"
+                android:backgroundTint="@color/primary_100"
+                android:clickable="true"
+                android:tint="#DDCCC0"
+                app:backgroundTint="@color/primary_100"
+                app:elevation="3dp"
+                app:fabCustomSize="32dp"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="@+id/txtPartyStartMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtPartyStartMessage"
+                app:maxImageSize="18dp"
+                app:pressedTranslationZ="3dp"
+                app:rippleColor="#FFFF"
+                app:srcCompat="@drawable/baseline_send_black_18" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPartyStartMember"
+        android:layout_width="58dp"
+        android:layout_height="195dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PartyStartMapView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPartyRoomBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:backgroundTint="@color/primary_100"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <Button
+        android:id="@+id/btnPartyStartEating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#1E83B3"
+        android:text="開吃"
+        app:layout_constraintBottom_toBottomOf="@+id/PartyStartMapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PartyStartMapView"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <ImageButton
+        android:id="@+id/btnShowMembersLocation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/primary_100"
+        android:src="@drawable/ic_baseline_groups_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnShowRestaurantLocation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/primary_100"
+        android:src="@drawable/ic_baseline_restaurant_24"
+        app:layout_constraintEnd_toEndOf="@+id/btnShowMembersLocation"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowMembersLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
